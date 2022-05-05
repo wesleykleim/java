@@ -2,12 +2,12 @@ package aula02_poo;
 
 public class Caneta {
 
-	String cor;
-	String modelo;
-	boolean tampada;
-	int carga;
-	float ponta;
-	float valor;
+	public String cor;
+	public String modelo;
+	protected boolean tampada;
+	protected int carga;
+	public float ponta;
+	public float valor;
 	
 	void status() {
 		System.out.println("Uma Caneta do modelo " + this.modelo);
@@ -18,15 +18,15 @@ public class Caneta {
 		System.out.println("Custa R$" + this.valor );
 		
 	}
-	void destampar() {
+	protected void destampar() {
 		this.tampada = false;
 	}
 	
-	void tampar() {
+	protected void tampar() {
 		this.tampada = true;
 	}
 	
-	void escrever() {
+	public void escrever() {
 		if (this.tampada == false) {
 			System.out.println("Estou escrevendo!");
 		}else {
